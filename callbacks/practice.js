@@ -124,6 +124,17 @@ contains(names, 'Colt', function(result){
 */
 
 //Code Here
+function uniq(array, func){
+  let result = []
+  for(let item of array){
+    if(!result.includes(item)){
+      result.push(item)
+    }
+  }
+  func(result);
+}
+
+
 
 
 // Do not edit the code below.
