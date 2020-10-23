@@ -15,6 +15,11 @@
 */
 
 //Code here
+const me = {
+  name: 'Kevin',
+  age: 30
+}
+alert(me.name);
 
 ////////// PROBLEM 2 //////////
 
@@ -24,6 +29,14 @@
 */
 
 //Code here
+const favoriteThings = {
+  band: 'None',
+  food: 'Pizza',
+  person: 'Kobe',
+  book: 'Animal Farm',
+  movie: 'Alien',
+  holiday: 'Christmas'
+}
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
@@ -31,14 +44,16 @@
 */
 
 //Code here
+favoriteThings.car = 'Audi';
+favoriteThings.brand = 'Nike';
 
-/*
-  Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
-  and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
-*/
+  // Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
+  // and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
+
 
 //Code here
-
+favoriteThings.food = 'Chicken Nuggets';
+favoriteThings.book = 'Harry Potter';
 ////////// PROBLEM 3 //////////
 
 /*
@@ -50,12 +65,16 @@
 */
 
 //Code here
-
+const backPack = {};
+const item = 'firstPocket';
+backPack[item] = 'chapstick';
+backPack.color = 'black;'
 /*
   After you do the above, alert your entire backPack object.
 */
 
 //Code here
+alert(backPack);
 
 /*
 You probably noticed that it just alerted [object Object].
@@ -64,6 +83,7 @@ Instead, console.log your whole backPack object and then check out the console.
 */
 
 //Code here
+console.log(backPack);
 
 ////////// PROBLEM 4 //////////
 
@@ -85,7 +105,9 @@ var user2 = {
 */
 
 //Code Here
-
+let user2Updated = user2;
+user2Updated.name = 'Bryan G. Smith';
+user2Updated.email = 'bryan.smith@devmounta.in'
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
 
@@ -96,6 +118,7 @@ var user2 = {
 */
 
 //Code Here
+const methodCollection = {};
 
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object.
@@ -103,11 +126,17 @@ var user2 = {
 */
 
 //Code Here
-
+methodCollection.alertHello = function(){
+  alert('hello');
+}
+methodCollection.logHello = function(){
+  console.log('hello');
+}
 /*
   Now call your alertHello and logHello methods.
 */
-
+methodCollection.alertHello();
+methodCollection.logHello();
 //Code Here
 
 ////////// PROBLEM 6 //////////
@@ -118,6 +147,16 @@ var user2 = {
 */
 
 //Code Here
+function makePerson(name, birthday, ssn){
+  const person = {
+    name: name,
+    birthday: birthday,
+    ssn: ssn,
+  }
+  return person;
+}
+
+makePerson('John', 'August 10, 1987', '234-23-3232')
 
 ////////// PROBLEM 7 //////////
 
@@ -125,5 +164,14 @@ var user2 = {
   Create a function called makeCard which takes in cardNumber, expirationDate, and securityCode to make a Credit Card object.
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
+function makeCard(cardNumber, expirationDate, securityCode){
+  const newCard = {
+    cardNumber: cardNumber,
+    expirationDate: expirationDate,
+    securityCode: securityCode,
+  }
+  return newCard;
+}
 
+makeCard(313133123123, '09/25', 176)
 //Code Here
